@@ -2,219 +2,137 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--style link-->
-
-    <link href="bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-    <!--meta web-->
-    <meta name="Description" content="">
-    <meta name="Subject" content="">
-    <meta name="Copyright" content="">
-    <meta name="Robots" content="all">
-    <meta name="Geography" content="Dijon">
-
-    <title>THE DICE GAME</title>
+  <title>THE DICE GAME</title>
+  <meta name="Description" content="100 ou rien est un jeu de dé où peuvent s'affronter deux joueurs.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="Style/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="Style/style1.css" rel="stylesheet" type="text/css">
 </head>
 
-<body class="bgdicegame">
-
-    <!-- HEADER -->
-    <header>
-        <div class="bandeau-pc px-2 mt-3 d-flex justify-content-center">
-            <img class="img-fluid" src="images/header.png" alt="header">
-        </div>
-    </header>
-    <!-- HEADER -->
-
-    <!-- NAVBAR -->
-    <nav class="d-flex justify-content-center ">
-        <form class="newgame m-3">
-            <a href="" data-bs-toggle="modal" data-bs-target="#game" class="btn btn-dark"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
-                </svg> Nouveau Jeu</a>
-        </form>
-        <form class="rules m-3">
-            <a href="" data-bs-toggle="modal" data-bs-target="#rules" class="btn btn-dark"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-umbrella"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M8 0a.5.5 0 0 1 .5.5v.514C12.625 1.238 16 4.22 16 8c0 0 0 .5-.5.5-.149 0-.352-.145-.352-.145l-.004-.004-.025-.023a3.484 3.484 0 0 0-.555-.394A3.166 3.166 0 0 0 13 7.5c-.638 0-1.178.213-1.564.434a3.484 3.484 0 0 0-.555.394l-.025.023-.003.003s-.204.146-.353.146-.352-.145-.352-.145l-.004-.004-.025-.023a3.484 3.484 0 0 0-.555-.394 3.3 3.3 0 0 0-1.064-.39V13.5H8h.5v.039l-.005.083a2.958 2.958 0 0 1-.298 1.102 2.257 2.257 0 0 1-.763.88C7.06 15.851 6.587 16 6 16s-1.061-.148-1.434-.396a2.255 2.255 0 0 1-.763-.88 2.958 2.958 0 0 1-.302-1.185v-.025l-.001-.009v-.003s0-.002.5-.002h-.5V13a.5.5 0 0 1 1 0v.506l.003.044a1.958 1.958 0 0 0 .195.726c.095.191.23.367.423.495.19.127.466.229.879.229s.689-.102.879-.229c.193-.128.328-.304.424-.495a1.958 1.958 0 0 0 .197-.77V7.544a3.3 3.3 0 0 0-1.064.39 3.482 3.482 0 0 0-.58.417l-.004.004S5.65 8.5 5.5 8.5c-.149 0-.352-.145-.352-.145l-.004-.004a3.482 3.482 0 0 0-.58-.417A3.166 3.166 0 0 0 3 7.5c-.638 0-1.177.213-1.564.434a3.482 3.482 0 0 0-.58.417l-.004.004S.65 8.5.5 8.5C0 8.5 0 8 0 8c0-3.78 3.375-6.762 7.5-6.986V.5A.5.5 0 0 1 8 0zM6.577 2.123c-2.833.5-4.99 2.458-5.474 4.854A4.124 4.124 0 0 1 3 6.5c.806 0 1.48.25 1.962.511a9.706 9.706 0 0 1 .344-2.358c.242-.868.64-1.765 1.271-2.53zm-.615 4.93A4.16 4.16 0 0 1 8 6.5a4.16 4.16 0 0 1 2.038.553 8.688 8.688 0 0 0-.307-2.13C9.434 3.858 8.898 2.83 8 2.117c-.898.712-1.434 1.74-1.731 2.804a8.687 8.687 0 0 0-.307 2.131zm3.46-4.93c.631.765 1.03 1.662 1.272 2.53.233.833.328 1.66.344 2.358A4.14 4.14 0 0 1 13 6.5c.77 0 1.42.23 1.897.477-.484-2.396-2.641-4.355-5.474-4.854z" />
-                </svg> Règles</a>
-        </form>
-        <form class="rules m-3">
-            <audio id="myAudio">
-                <source src="son/pink-soldiers.wav" type="audio/mpeg">
-                This HTML5 player is not supported by your browser
-              </audio>
-              <button type="button" class="btn btn-dark" onclick="aud_play_pause()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-volume-up" viewBox="0 0 16 16">
-                <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
-                <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
-                <path d="M10.025 8a4.486 4.486 0 0 1-1.318 3.182L8 10.475A3.489 3.489 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.486 4.486 0 0 1 10.025 8zM7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12V4zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11z"/>
-              </svg></button>
-    </nav>
-    <!-- NAVBAR -->
-
-
-    <!-- CONTAINER -->
-
-    <!-- MODAL NOUVEAU JEU -->
-    <div class="modal fade" id="game" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-
-                <div class="modal-body"><button type="button" class="btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                    <img class=" img-fluid" src="images/imgmodal-newgame.png" alt="new game">
-
-                    <!-- Input Player1 -->
-                    <div class="inputPlayers">
-                        <div class="inputPlayer">
-                            <label class="playerTitleUnLabel" for="playerTitleUnInput">Joueur 1</label>
-                            <input type="text" id="playerTitleUnInput" name="playerTitleUnInput"
-                                placeholder="Entrez votre prénom" onFocus="javascript:this.value=''">
-                        </div>
-                        <!-- Input Player2 -->
-                        <div class="inputPlayer">
-                            <label class="playerTitleDeuxLabel" for="playerTitleDeuxInput">Joueur 2</label>
-                            <input type="text" id="playerTitleDeuxInput" name="playerTitleDeuxInput"
-                                placeholder="Entrez votre prénom" onFocus="javascript:this.value=''">
-                        </div>
-                        <div class="scoreToGet">
-                            <label class="scoreToGetLabel" for="scoreToGetLabel">Quel score voulez-vous atteindre ?
-                                (10-100) :</label>
-                            <input type="number" id="scoreToGetInput" name="scoreToGetInput" min="10" max="100"
-                                step="10" value="100">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-dark startGameButton" data-bs-dismiss="modal">JOUER</button>
-
-                </div>
-
-            </div>
-        </div>
+<body class=" main1">
+  <header class=" bgdicegame d-flex flex-column justify-content-center align-items-center">
+    <div class="bandeau-pc py-3 px-2 mt-3 d-flex justify-content-center">
+      <img class="img-fluid" src="images/header.png" alt="header">
     </div>
-    <!-- MODAL NOUVEAU JEU -->
-
-
-
-
-
-    <!-- MODAL REGLES DU JEU-->
-    <div class="modal fade" id="rules" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header d-flex justify-content-center">
-                    <h5 class="modal-title " id="staticBackdropLabel">Les Règles du Jeu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img class=" img-fluid" src="images/imgmodal.png" alt="maitre du jeu">
-                    <div class="rules-txt pt-3">
-                        <h5><strong>Le premier joueur à 100 points survit !</strong></h5>
-                        <div class="rules-content pt-1">
-                            <p>- Chaque joueur a un <span style="color: #009765"><strong> score temporaire (en vert)
-                                    </strong></span>et un <span style="color: #fd1100"><strong> score total (en
-                                        rouge).</strong></span></p>
-                            <p>- À chaque tour, vous lancez le dé (👉🏼en cliquant dessus👈🏼) autant de fois que vous
-                                le souhaitez.</p>
-                            <p>- Quand vous souhaitez sécuriser votre score temporaire, cliquez sur Sécuriser pour
-                                ajouter votre score temporaire au Total</p>
-                            <p>- 🚨 <strong>Mais ATTENTION : si votre dé tombe sur 1 🎲</strong> et que vous n'avez pas
-                                sécurisé votre score, vous perdez votre mise temporaire.</p>
-                            <h4 class="goodluck">BONNE CHANCE !</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                </div>
-            </div>
+  </header>
+  <!-- MODAL REGLES DU JEU -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-header d-flex justify-content-center">
+        <h2 class="modal-title">Les Règles du Jeu</h2>
+      </div>
+      <div class="modal-body ">
+        <div class="d-flex justify-content-center">
+          <img class="imagedelamodal img-fluid" src="images/imgmodal.png" alt="maitre du jeu">
         </div>
+        <div class="rules-txt p-3">
+          <h5><strong>Le premier joueur à 100 points survit !</strong></h5>
+          <div class="rules-content pt-1">
+            <p>- Chaque joueur a un <span style="color: #009765"><strong> score temporaire (en vert)
+                </strong></span>et un <span style="color: #fd1100"><strong> score total (en
+                  rouge).</strong></span></p>
+            <p>- À chaque tour, vous lancez le dé (👉🏼en cliquant dessus👈🏼) autant de fois que vous
+              le souhaitez.</p>
+            <p>- Quand vous souhaitez sécuriser votre score temporaire, cliquez sur Sécuriser pour
+              ajouter votre score temporaire au Total</p>
+            <p>- 🚨 <strong>Mais ATTENTION : si votre dé tombe sur 1 🎲</strong> et que vous n'avez pas
+              sécurisé votre score, vous perdez votre mise temporaire.</p>
+            <h4 class="goodluck">BONNE CHANCE !</h4>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- MODAL REGLES DU JEU -->
+  </div>
+  <!-- MODAL REGLES DU JEU -->
+
+  <main class="d-flex flex-column align-items-center">
+    
+    
+    <div class="row col-6 justify-content-center pb-2">
+      <div class="col-3">
+    <button id="new-game" class="on btn-dark text-center p-1">Nouvelle partie</button></div>
+    <div class="col-3">
+    <button id="myBtn" class="btn-dark p-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+          fill="currentColor" class="bi bi-umbrella" viewBox="0 0 16 16">
+          <path d="M8 0a.5.5 0 0 1 .5.5v.514C12.625 1.238 16 4.22 16 8c0 0 0 .5-.5.5-.149 0-.352-.145-.352-.145l-.004-.004-.025-.023a3.484 3.484 0 0 0-.555-.394A3.166 3.166 0 0 0 13 7.5c-.638 0-1.178.213-1.564.434a3.484 3.484 0 0 0-.555.394l-.025.023-.003.003s-.204.146-.353.146-.352-.145-.352-.145l-.004-.004-.025-.023a3.484 3.484 0 0 0-.555-.394 3.3 3.3 0 0 0-1.064-.39V13.5H8h.5v.039l-.005.083a2.958 2.958 0 0 1-.298 1.102 2.257 2.257 0 0 1-.763.88C7.06 15.851 6.587 16 6 16s-1.061-.148-1.434-.396a2.255 2.255 0 0 1-.763-.88 2.958 2.958 0 0 1-.302-1.185v-.025l-.001-.009v-.003s0-.002.5-.002h-.5V13a.5.5 0 0 1 1 0v.506l.003.044a1.958 1.958 0 0 0 .195.726c.095.191.23.367.423.495.19.127.466.229.879.229s.689-.102.879-.229c.193-.128.328-.304.424-.495a1.958 1.958 0 0 0 .197-.77V7.544a3.3 3.3 0 0 0-1.064.39 3.482 3.482 0 0 0-.58.417l-.004.004S5.65 8.5 5.5 8.5c-.149 0-.352-.145-.352-.145l-.004-.004a3.482 3.482 0 0 0-.58-.417A3.166 3.166 0 0 0 3 7.5c-.638 0-1.177.213-1.564.434a3.482 3.482 0 0 0-.58.417l-.004.004S.65 8.5.5 8.5C0 8.5 0 8 0 8c0-3.78 3.375-6.762 7.5-6.986V.5A.5.5 0 0 1 8 0zM6.577 2.123c-2.833.5-4.99 2.458-5.474 4.854A4.124 4.124 0 0 1 3 6.5c.806 0 1.48.25 1.962.511a9.706 9.706 0 0 1 .344-2.358c.242-.868.64-1.765 1.271-2.53zm-.615 4.93A4.16 4.16 0 0 1 8 6.5a4.16 4.16 0 0 1 2.038.553 8.688 8.688 0 0 0-.307-2.13C9.434 3.858 8.898 2.83 8 2.117c-.898.712-1.434 1.74-1.731 2.804a8.687 8.687 0 0 0-.307 2.131zm3.46-4.93c.631.765 1.03 1.662 1.272 2.53.233.833.328 1.66.344 2.358A4.14 4.14 0 0 1 13 6.5c.77 0 1.42.23 1.897.477-.484-2.396-2.641-4.355-5.474-4.854z" />
+        </svg> Règles</button>
+    </div>
 
 
-    <main>
+    <form class="col-3  d-flex justify-content-center">
+      <audio id="myAudio">
+        <source src="son/pink-soldiers.wav" type="audio/mpeg">
+        This HTML5 player is not supported by your browser
+      </audio>
+      <button type="button" class="btn btn-dark" onclick="aud_play_pause()"><svg xmlns="http://www.w3.org/2000/svg"
+          width="20" height="20" fill="currentColor" class="bi bi-volume-up" viewBox="0 0 16 16">
+          <path
+            d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z" />
+          <path
+            d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z" />
+          <path
+            d="M10.025 8a4.486 4.486 0 0 1-1.318 3.182L8 10.475A3.489 3.489 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.486 4.486 0 0 1 10.025 8zM7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12V4zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11z" />
+        </svg></button>
+    </form></div>
 
-        <!-- Players -->
-        <div class="players row justify-content-center container m-auto position-relative">
+    <p class="p-text" id="p-text1">Le premier joueur à 100 points survit !</p>
+    <div class="d-flex justify-content-center">
+      <div id="main-left">
+        <img class="img-fluid" src="Images/vieux.png">
+        <div id="player-1">
+          <h2 class="player-size" id="player-name1"></h2>
+          <h3 class="current">Score intermédiaire</h3>
+          <p id="score-current-1">0</p>
+          <div id="div-score-global">
+            <h3 class="global">Score acquis</h3>
+            <p id="score-global-1">0</p>
+          </div>
+        </div>
+      </div>
 
-            <!-- Player 1 -->
-            <div class="player1 playerUn bg-white col-12 col-lg-5 text-center" id="player-1">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="d-flex flex-column">
+          <button id="throw" class="on">Lancer le dé</button>
+          <button id="hold" class="on">Sécuriser</button>
+        </div>
+        <div class="space">
+          <img id="dice-image" src="Images/dice-1.png">
+        </div>
+      </div>
 
-                <div class="player-title">
-                    <p class="player-title1">Joueur 1</p>
-                </div>
+      <div id="main-right">
+        <img class="img-fluid" src="Images/jeune.png">
+        <div id="player-2">
+          <h2 class="player-size" id="player-name2"></h2>
+          <h3 class="current">Score intermédiaire</h3>
+          <p id="score-current-2">0</p>
+          <div id="div-score-global">
+            <h3 class="global">Score acquis</h3>
+            <p id="score-global-2">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-                <div class="playerInner playerInner1 row row-cols-2 row-cols-lg-1 p-2">
-                    <div class="roundWrap col d-flex flex-column align-items-center">
-                        <div class="roundScore text-center" id="roundScore-1">-</div>
-                        <button class="bouton-securiser holdScore col-lg-4 btn-dark" id="holdScore-1">Sécuriser</button>
-                    </div>
-                    <div class="col">
-                        <div class="totalScore text-center" id="totalScore-1">-</div>
-                        <div class="totalScoreText totalScoreUnText text-center">TOTAL</div>
-                    </div>
-                </div>
 
-            </div>
 
-            <!-- Player 2 -->
-            <div class="player2 playerDeux bg-white col-12 col-lg-5 text-center" id="player-2">
 
-                <div class="player-title">
-                    <p class="player-title2">Joueur 2</p>
-                </div>
+    <p id="p-state" style="display:none"></p>
+    <p id="p-win" style="display:none"></p>
+    <div id="ligne"></div>
 
-                <div class="playerInner playerInner1 row row-cols-2 row-cols-lg-1 p-2">
-                    <div class=" col d-flex flex-column align-items-center">
-                        <div class="roundScore text-center" id="roundScore-2">-</div>
-                        <button class="bouton-securiser holdScore col-lg-4 btn-dark" id="holdScore-2">Sécuriser</button>
-                    </div>
-                    <div class="col">
-                        <div class="totalScore text-center" id="totalScore-2">-</div>
-                        <div class="totalScoreText totalScoreDeuxText text-center">TOTAL</div>
-                    </div>
-                </div>
+  </main>
+  <footer class="d-flex flex-column justify-content-start align-items-center">
 
-            </div>
-            <!-- CONTAINER -->
+  </footer>
+  <script src="javascript/jquery-3.6.0.js"></script>
+  <script src="javascript/script1.js"></script>
 </body>
-
-<!-- Footer -->
-<footer>
-    <!-- Copyright -->
-
-
-    <!-- Copyright -->
-</footer>
-<!-- Footer -->
-
-<!-- Script - jQuery -->
-<script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js "></script>
-<!-- JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="script.js"></script>
-</body>
-
 
 </html>
